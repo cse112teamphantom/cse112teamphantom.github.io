@@ -17,10 +17,16 @@ body{
 	margin: 15px;
 }
 
-.our-message-screen{
+.our-message-screen-visible {
+	visibility: visible;
+	height: 100%;
+	width: 100%;
+}
+
+.our-message-screen-invisible {
 	visibility: hidden;
-	height: 0;
-	width: 0;
+	height: 0px;
+	width: 0px;
 }
 
 .title-image{
@@ -31,6 +37,60 @@ body{
 }
 
 .team-screen{
+	margin-left: auto;
+	margin-right: auto;
+	color: white;
+	text-align: center;
+}
+
+.tooltip {
+	position: relative;
+	display: inline-block;
+	border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+  }
+  
+  /* Tooltip text */
+  .tooltip .tooltiptext {
+	visibility: hidden;
+	width: 120px;
+	background-color: black;
+	color: #fff;
+	text-align: center;
+	padding: 5px 0;
+	border-radius: 6px;
+   
+	/* Position the tooltip text - see examples below! */
+	position: absolute;
+	z-index: 1;
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .tooltip:hover .tooltiptext {
+	visibility: visible;
+  }
+
+.team-screen-invisible {
+	margin-left: auto;
+	margin-right: auto;
+	display: none;
+	text-align: center;
+}
+
+.team-screen-visible {
+	margin-left: auto;
+	margin-right: auto;
+	color: white;
+	text-align: center;
+}
+
+.documentation-invisible {
+	margin-left: auto;
+	margin-right: auto;
+	display: none;
+	text-align: center;
+}
+
+.documentation-visible {
 	margin-left: auto;
 	margin-right: auto;
 	color: white;
@@ -52,7 +112,7 @@ iframe{
 
 footer {
 	color: white;
-    position: absolute;
+    /*  position: absolute; */
     left: 0;
     bottom: 0;
     width: 100%;

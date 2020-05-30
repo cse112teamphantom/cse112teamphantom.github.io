@@ -1,8 +1,53 @@
 <!DOCTYPE html>
 <html>
+	<script>
+		function showTeam() {
+			/* show team page */
+			var classArr = document.getElementsByClassName("team-screen-invisible");
+			if (classArr.length > 0)
+				classArr[0].className = "team-screen-visible";
+
+			/* hide other pages */
+			classArr = document.getElementsByClassName("our-message-screen-visible");
+			if (classArr.length > 0)
+				classArr[0].className = "our-message-screen-invisible";
+			classArr = document.getElementsByClassName("documentation-visible");
+			if (classArr.length > 0)
+				classArr[0].className = "documentation-invisible";
+		}
+
+		function showOurMessage() {
+			var classArr = document.getElementsByClassName("our-message-screen-invisible");
+			if (classArr.length > 0)
+				classArr[0].className = "our-message-screen-visible";
+
+			/* hide other pages */
+			classArr = document.getElementsByClassName("team-screen-visible");
+			if (classArr.length > 0)
+				classArr[0].className = "team-screen-invisible";
+			classArr = document.getElementsByClassName("documentation-visible");
+			if (classArr.length > 0)
+				classArr[0].className = "documentation-invisible";
+		}
+
+		function showDocumentation() {
+			var classArr = document.getElementsByClassName("documentation-invisible");
+			if (classArr.length > 0)
+				classArr[0].className = "documentation-visible";
+
+			/* hide other pages */
+			classArr = document.getElementsByClassName("team-screen-visible");
+			if (classArr.length > 0)
+				classArr[0].className = "team-screen-invisible";
+			classArr = document.getElementsByClassName("our-message-screen-visible");
+			if (classArr.length > 0)
+				classArr[0].className = "our-message-screen-invisible";
+		}
+	</script>
+
 	<head>
-			<link rel="stylesheet" href="bootstrap.min.css">
-			<link rel="stylesheet" href="style_sheet.css">
+		<link rel="stylesheet" href="bootstrap.min.css">
+		<link rel="stylesheet" href="style_sheet.css">
 	</head>
 <body>
 	
@@ -11,7 +56,8 @@
 	<center><img src="title.png" class="title-image" onmouseover="this.src='title_eyes.png'" onmouseout="this.src='title.png'"></center>
 	
 	<div class="fixed-top">
-	<nav class="navbar navbar-expand-lg navbar-dark">
+
+	<nav class="navbar navbar-expand navbar-dark">
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
 			  <span class="navbar-toggler-icon"></span>
 			</button>
@@ -19,13 +65,13 @@
 			<div class="collapse navbar-collapse" id="navbarText">
 			  <ul class="navbar-nav mr-auto">
 				<li class="nav-item active">
-				  <a class="nav-link" href="#">Our Message<span class="sr-only">(current)</span></a>
+				  <a class="nav-link" href="#" onclick="showOurMessage()">Our Message<span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item">
-				  <a class="nav-link" href="#">Team</a>
+				  <a class="nav-link" href="#" onclick="showTeam()">Team</a>
 				</li>
 				<li class="nav-item">
-				  <a class="nav-link" href="#">Documentation</a>
+				  <a class="nav-link" href="#" onclick="showDocumentation()">Documentation</a>
 				</li>
 				<li class="nav-item">
 						<a class="nav-link" href="#">Download</a>
@@ -36,36 +82,43 @@
 		  </nav>
 	</div>
 
-	<div class="our-message-screen">
+	<div class="our-message-screen-visible">
 		<center>
 			<iframe width="766" height="431" src="https://drive.google.com/file/d/11kS5Wcb782LR5RW-rmlvrQmNA1yGUrUt/preview">allowfullscreen>
 			</iframe>
 		</center>
 	</div>
 
-	<div class="team-screen">
+	<div class="documentation-invisible">
+		<h1>Documentation</h1>
+	</div>
+
+	<div class="tooltip" style="color: white;">Hover over me
+		<span class="tooltiptext">Tooltip text</span>
+	  </div> 
+	<div id="team-screen" class="team-screen-invisible">
 		<table style="width:100%">
 			<tr>
-				<td><img class="headshot" src="headshot.jpeg" ><p>FIRST LAST</p><p>Lead</p></td>
-				<td><img class="headshot" src="headshot.jpeg" ><p>FIRST LAST</p><p>Lead</p></td>
-				<td><img class="headshot" src="headshot.jpeg" ><p>FIRST LAST</p><p>Lead</p></td>
-				<td><img class="headshot" src="headshot.jpeg" ><p>FIRST LAST</p><p>Lead</p></td>
+				<td><img class="headshot" src="headshot.jpeg"><p>FIRST LAST</p><p>Lead</p><p>Quote goes here!</p></td>
+				<td><img class="headshot" src="headshot.jpeg"><p>FIRST LAST</p><p>Lead</p><p>Quote goes here!</p></td>
+				<td><img class="headshot" src="headshot.jpeg"><p>FIRST LAST</p><p>Lead</p><p>Quote goes here!</p></td>
+				<td><img class="headshot" src="headshot.jpeg"><p>FIRST LAST</p><p>Lead</p><p>Quote goes here!</p></td>
 			</tr>
 			<tr>
-				<td><img class="headshot" src="headshot.jpeg" ><p>FIRST LAST</p><p>Lead</p></td>
-				<td><img class="headshot" src="headshot.jpeg" ><p>FIRST LAST</p><p>Lead</p></td>
-				<td><img class="headshot" src="headshot.jpeg" ><p>FIRST LAST</p><p>Lead</p></td>
+				<td><img class="headshot" src="headshot.jpeg"><p>FIRST LAST</p><p>Lead</p></td>
+				<td><img class="headshot" src="headshot.jpeg"><p>FIRST LAST</p><p>Lead</p></td>
+				<td><img class="headshot" src="headshot.jpeg"><p>FIRST LAST</p><p>Lead</p></td>
 			</tr>
 			<tr>
-				<td><img class="headshot" src="headshot.jpeg" ><p>FIRST LAST</p><p>Lead</p></td>
-				<td><img class="headshot" src="headshot.jpeg" ><p>FIRST LAST</p><p>Lead</p></td>
-				<td><img class="headshot" src="headshot.jpeg" ><p>FIRST LAST</p><p>Lead</p></td>
-				<td><img class="headshot" src="headshot.jpeg" ><p>FIRST LAST</p><p>Lead</p></td>
+				<td><img class="headshot" src="headshot.jpeg"><p>FIRST LAST</p><p>Lead</p></td>
+				<td><img class="headshot" src="headshot.jpeg"><p>FIRST LAST</p><p>Lead</p></td>
+				<td><img class="headshot" src="headshot.jpeg"><p>FIRST LAST</p><p>Lead</p></td>
+				<td><img class="headshot" src="headshot.jpeg"><p>FIRST LAST</p><p>Lead</p></td>
 			</tr>
 			<tr>
-				<td><img class="headshot" src="headshot.jpeg" ><p>FIRST LAST</p><p>Lead</p></td>
-				<td><img class="headshot" src="headshot.jpeg" ><p>FIRST LAST</p><p>Lead</p></td>
-				<td><img class="headshot" src="headshot.jpeg" ><p>FIRST LAST</p><p>Lead</p></td>
+				<td><img class="headshot" src="headshot.jpeg"><p>FIRST LAST</p><p>Lead</p></td>
+				<td><img class="headshot" src="headshot.jpeg"><p>FIRST LAST</p><p>Lead</p></td>
+				<td><img class="headshot" src="headshot.jpeg"><p>FIRST LAST</p><p>Lead</p></td>
 			</tr>
 		</table>
 	</div>
