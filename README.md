@@ -6,7 +6,7 @@ mkdir team_website
 cd team_website  
 git remote -v  
 git remote remove origin  
-git remote add origin url  
+git remote add origin https://github.com/cse112teamphantom/cse112teamphantom.github.io.git   
 git pull origin master --allow-unrelated-histories  
 
 Next, whenever you make changes to file and want to merge with everything we have:  
