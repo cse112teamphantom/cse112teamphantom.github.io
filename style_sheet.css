@@ -10,11 +10,17 @@ body{
 	background-repeat: no-repeat;
 	background-size: cover;
 }
+
+title{
+	font-size: 24px;
+}
+
+p{
+	margin: 0 0 0 30px;
+}
 .headshot{
-	border-radius: 25%;
-	width: 65%;
-	height: 50%;
 	margin: 15px;
+	filter: drop-shadow(0 0 5px white);
 }
 
 .our-message-screen-visible {
@@ -43,32 +49,6 @@ body{
 	text-align: center;
 }
 
-.tooltip {
-	position: relative;
-	display: inline-block;
-	border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
-  }
-  
-  /* Tooltip text */
-  .tooltip .tooltiptext {
-	visibility: hidden;
-	width: 120px;
-	background-color: black;
-	color: #fff;
-	text-align: center;
-	padding: 5px 0;
-	border-radius: 6px;
-   
-	/* Position the tooltip text - see examples below! */
-	position: absolute;
-	z-index: 1;
-  }
-  
-  /* Show the tooltip text when you mouse over the tooltip container */
-  .tooltip:hover .tooltiptext {
-	visibility: visible;
-  }
-
 .team-screen-invisible {
 	margin-left: auto;
 	margin-right: auto;
@@ -77,10 +57,10 @@ body{
 }
 
 .team-screen-visible {
-	margin-left: auto;
-	margin-right: auto;
 	color: white;
-	text-align: center;
+	padding: 0 0 0 65px;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 18px;
 }
 
 .documentation-invisible {
@@ -117,4 +97,51 @@ footer {
     bottom: 0;
     width: 100%;
     overflow: hidden;
+}
+
+.avatar{
+	width: 400px;
+	height: 400px;
+	border-radius: 25px;
+	background-repeat: no-repeat;
+}
+.avatar::before,
+.avatar::after {
+  --scale: 0;
+  --arrow-size: 10px;
+  --tooltip-color: #333;
+
+  position: absolute;
+  top: -.25rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(var(--translate-y, 0)) scale(var(--scale));
+  transition: 150ms transform;
+  transform-origin: bottom center;
+}
+
+.avatar::before {
+  --translate-y: calc(-100% - var(--arrow-size));
+
+  content: attr(data-tooltip);
+  color: white;
+  padding: .5rem;
+  border-radius: .3rem;
+  text-align: center;
+  width: max-content;
+  max-width: 100%;
+  background: var(--tooltip-color);
+}
+
+.avatar:hover::before,
+.avatar:hover::after {
+  --scale: 1;
+}
+
+.avatar::after {
+  --translate-y: calc(-1 * var(--arrow-size));
+
+  content: '';
+  border: var(--arrow-size) solid transparent;
+  border-top-color: var(--tooltip-color);
+  transform-origin: top center;
 }

@@ -1,53 +1,65 @@
 <!DOCTYPE html>
 <html>
+
 	<script>
+
 		function showTeam() {
 			/* show team page */
 			var classArr = document.getElementsByClassName("team-screen-invisible");
 			if (classArr.length > 0)
 				classArr[0].className = "team-screen-visible";
+				document.getElementsByClassName("nav-link")[1].style.color = "white";
 
 			/* hide other pages */
 			classArr = document.getElementsByClassName("our-message-screen-visible");
 			if (classArr.length > 0)
 				classArr[0].className = "our-message-screen-invisible";
+				document.getElementsByClassName("nav-link")[0].style.color = "gray";
 			classArr = document.getElementsByClassName("documentation-visible");
 			if (classArr.length > 0)
 				classArr[0].className = "documentation-invisible";
+				document.getElementsByClassName("nav-link")[2].style.color = "gray";
 		}
 
 		function showOurMessage() {
 			var classArr = document.getElementsByClassName("our-message-screen-invisible");
 			if (classArr.length > 0)
 				classArr[0].className = "our-message-screen-visible";
+				document.getElementsByClassName("nav-link")[0].style.color = "white";
 
 			/* hide other pages */
 			classArr = document.getElementsByClassName("team-screen-visible");
 			if (classArr.length > 0)
 				classArr[0].className = "team-screen-invisible";
+				document.getElementsByClassName("nav-link")[1].style.color = "gray";
 			classArr = document.getElementsByClassName("documentation-visible");
 			if (classArr.length > 0)
 				classArr[0].className = "documentation-invisible";
+				document.getElementsByClassName("nav-link")[2].style.color = "gray";
 		}
 
 		function showDocumentation() {
 			var classArr = document.getElementsByClassName("documentation-invisible");
 			if (classArr.length > 0)
 				classArr[0].className = "documentation-visible";
+				document.getElementsByClassName("nav-link")[2].style.color = "white";
 
 			/* hide other pages */
 			classArr = document.getElementsByClassName("team-screen-visible");
 			if (classArr.length > 0)
 				classArr[0].className = "team-screen-invisible";
+				document.getElementsByClassName("nav-link")[1].style.color = "gray";
 			classArr = document.getElementsByClassName("our-message-screen-visible");
 			if (classArr.length > 0)
 				classArr[0].className = "our-message-screen-invisible";
+				document.getElementsByClassName("nav-link")[0].style.color = "gray";
 		}
 	</script>
 
 	<head>
 		<link rel="stylesheet" href="bootstrap.min.css">
 		<link rel="stylesheet" href="style_sheet.css">
+		<link href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Bungee&family=Quicksand:wght@600&display=swap" rel="stylesheet">
 	</head>
 <body>
 	
@@ -82,43 +94,44 @@
 		  </nav>
 	</div>
 
+	<!--
 	<div class="our-message-screen-visible">
 		<center>
 			<iframe width="766" height="431" src="https://drive.google.com/file/d/11kS5Wcb782LR5RW-rmlvrQmNA1yGUrUt/preview">allowfullscreen>
 			</iframe>
 		</center>
 	</div>
-
+	-->
+	
 	<div class="documentation-invisible">
 		<h1>Documentation</h1>
 	</div>
 
-	<div class="tooltip" style="color: white;">Hover over me
-		<span class="tooltiptext">Tooltip text</span>
-	  </div> 
 	<div id="team-screen" class="team-screen-invisible">
 		<table style="width:100%">
 			<tr>
-				<td><img class="headshot" src="headshot.jpeg"><p>FIRST LAST</p><p>Lead</p><p>Quote goes here!</p></td>
-				<td><img class="headshot" src="headshot.jpeg"><p>FIRST LAST</p><p>Lead</p><p>Quote goes here!</p></td>
-				<td><img class="headshot" src="headshot.jpeg"><p>FIRST LAST</p><p>Lead</p><p>Quote goes here!</p></td>
-				<td><img class="headshot" src="headshot.jpeg"><p>FIRST LAST</p><p>Lead</p><p>Quote goes here!</p></td>
+				<td><div class="headshot avatar" style="background-image: url('julian.jpeg');" data-tooltip="Hi, I'm Julian, a 3rd year studying Computer Science. I used to ride an electric longboard around campus."></div><p>Julian Alberto</p><p>Lead</p><p>jualbert@ucsd.edu</p></td>
+				<td><div class="headshot avatar " style="background-image: url('will.png');" data-tooltip="I'm Will Hsu, 2nd year CS major in R&D. My favorite animal is an alpaca."></div><p>Will Hsu</p><p>Research and Design</p><p>whsu@ucsd.edu</p></td>
+				<td><div class="headshot avatar " style="background-image: url('default_profile.png');" data-tooltip="My quote ..."></div><p>FIRST LAST</p><p>Role</p><p>Email</p></td>
 			</tr>
 			<tr>
-				<td><img class="headshot" src="headshot.jpeg"><p>FIRST LAST</p><p>Lead</p></td>
-				<td><img class="headshot" src="headshot.jpeg"><p>FIRST LAST</p><p>Lead</p></td>
-				<td><img class="headshot" src="headshot.jpeg"><p>FIRST LAST</p><p>Lead</p></td>
+					<td><div class="headshot avatar " style="background-image: url('default_profile.png');" data-tooltip="My quote ..."></div><p>FIRST LAST</p><p>Role</p><p>Email</p></td>
+					<td><div class="headshot avatar " style="background-image: url('default_profile.png');" data-tooltip="My quote ..."></div><p>FIRST LAST</p><p>Role</p><p>Email</p></td>
+					<td><div class="headshot avatar " style="background-image: url('default_profile.png');" data-tooltip="My quote ..."></div><p>FIRST LAST</p><p>Role</p><p>Email</p></td>
 			</tr>
 			<tr>
-				<td><img class="headshot" src="headshot.jpeg"><p>FIRST LAST</p><p>Lead</p></td>
-				<td><img class="headshot" src="headshot.jpeg"><p>FIRST LAST</p><p>Lead</p></td>
-				<td><img class="headshot" src="headshot.jpeg"><p>FIRST LAST</p><p>Lead</p></td>
-				<td><img class="headshot" src="headshot.jpeg"><p>FIRST LAST</p><p>Lead</p></td>
+					<td><div class="headshot avatar " style="background-image: url('default_profile.png');" data-tooltip="My quote ..."></div><p>FIRST LAST</p><p>Role</p><p>Email</p></td>
+					<td><div class="headshot avatar " style="background-image: url('default_profile.png');" data-tooltip="My quote ..."></div><p>FIRST LAST</p><p>Role</p><p>Email</p></td>
+					<td><div class="headshot avatar " style="background-image: url('default_profile.png');" data-tooltip="My quote ..."></div><p>FIRST LAST</p><p>Role</p><p>Email</p></td>
 			</tr>
 			<tr>
-				<td><img class="headshot" src="headshot.jpeg"><p>FIRST LAST</p><p>Lead</p></td>
-				<td><img class="headshot" src="headshot.jpeg"><p>FIRST LAST</p><p>Lead</p></td>
-				<td><img class="headshot" src="headshot.jpeg"><p>FIRST LAST</p><p>Lead</p></td>
+					<td><div class="headshot avatar " style="background-image: url('default_profile.png');" data-tooltip="My quote ..."></div><p>FIRST LAST</p><p>Role</p><p>Email</p></td>
+					<td><div class="headshot avatar " style="background-image: url('default_profile.png');" data-tooltip="My quote ..."></div><p>FIRST LAST</p><p>Role</p><p>Email</p></td>
+					<td><div class="headshot avatar " style="background-image: url('default_profile.png');" data-tooltip="My quote ..."></div><p>FIRST LAST</p><p>Role</p><p>Email</p></td>
+			</tr>
+			<tr>
+					<td><div class="headshot avatar " style="background-image: url('default_profile.png');" data-tooltip="My quote ..."></div><p>FIRST LAST</p><p>Role</p><p>Email</p></td>
+					<td><div class="headshot avatar " style="background-image: url('default_profile.png');" data-tooltip="My quote ..."></div><p>FIRST LAST</p><p>Role</p><p>Email</p></td>
 			</tr>
 		</table>
 	</div>
@@ -126,6 +139,9 @@
 	<center>
 		<footer>
 				<p>&#169; Phantom inc.</p>
+				<div class="tooltip">Hover over me
+						<span class="tooltiptext">Tooltip text</span>
+				</div>
 		</footer>
 	</center>
 </body>
