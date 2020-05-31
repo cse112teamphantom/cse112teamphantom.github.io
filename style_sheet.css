@@ -3,37 +3,30 @@ html{
 }
 
 body{
-	background-color: #252338; 
-	/* Create the parallax scrolling effect */
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+	/* background-image: linear-gradient(to bottom, #252338, black); */
+	background-color: #252338;
 }
+
+#title-image{
+	width: 40%;
+	height: 40%;
+	margin: auto;
+	padding: 0px;
+	margin-bottom: 20px;
+}
+
 .headshot{
 	border-radius: 25%;
-	width: 65%;
-	height: 50%;
+	height: 200px;
+	width: auto;
 	margin: 15px;
 }
 
-.our-message-screen-visible {
+.our-message-screen {
+	color: white;
+	text-align: center;
 	visibility: visible;
-	height: 100%;
-	width: 100%;
-}
-
-.our-message-screen-invisible {
-	visibility: hidden;
-	height: 0px;
-	width: 0px;
-}
-
-.title-image{
-	width: 15%;
-	height: 15%;
-	margin: 0px;
-	padding: 0px;
+	display: block;
 }
 
 .team-screen{
@@ -69,6 +62,25 @@ body{
 	visibility: visible;
   }
 
+.team-screen {
+	margin-left: auto;
+	margin-right: auto;
+	color: white;
+	text-align: center;
+}
+
+.hidden {
+	display: none;
+}
+
+.container {
+	padding: 80px;
+}
+
+.visible {
+	display: block;
+}
+
 .team-screen-invisible {
 	margin-left: auto;
 	margin-right: auto;
@@ -79,18 +91,11 @@ body{
 .team-screen-visible {
 	margin-left: auto;
 	margin-right: auto;
-	color: white;
+	color: grey;
 	text-align: center;
 }
 
-.documentation-invisible {
-	margin-left: auto;
-	margin-right: auto;
-	display: none;
-	text-align: center;
-}
-
-.documentation-visible {
+.documentation-screen {
 	margin-left: auto;
 	margin-right: auto;
 	color: white;
@@ -104,10 +109,6 @@ iframe{
 	-moz-border-radius: 12px;
 	-webkit-border-radius: 12px;
 	border-radius: 12px;
-	-moz-box-shadow: 4px 4px 14px #000;
-	-webkit-box-shadow: 4px 4px 14px #000;
-	box-shadow: 4px 4px 14px #000;
-	filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=.2);
 }
 
 footer {
