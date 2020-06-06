@@ -145,3 +145,11 @@ footer {
   border-top-color: var(--tooltip-color);
   transform-origin: top center;
 }
+
+#download-btn {
+    background-color: green;
+    color: #c0c0c0;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+}
