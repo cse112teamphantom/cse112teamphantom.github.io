@@ -23,6 +23,10 @@ p{
 	filter: drop-shadow(0 0 5px white);
 }
 
+.table-of-contents{
+	text-align: left;
+}
+
 .our-message-screen-visible {
 	visibility: visible;
 	height: 100%;
